@@ -23,8 +23,7 @@ jobs:
 
       - name: Build project
         run: npm run build
-        with:
-          working-directory: test_contract_frontend
+        working-directory: test_contract_frontend
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v4
