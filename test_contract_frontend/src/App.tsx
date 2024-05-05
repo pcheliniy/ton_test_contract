@@ -17,6 +17,10 @@ function App() {
 
   const { connected } = useTonConnect()
 
+  if (!WebApp.isExpanded) {
+    WebApp.expand();
+  }
+  
   return (
     <div>
       <div>
