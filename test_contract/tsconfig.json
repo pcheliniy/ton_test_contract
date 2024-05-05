@@ -9,8 +9,6 @@
       "resolveJsonModule": true
     },
     "ts-node": {
-            // "transpileOnly": true,
-            // "transpiler": "node_modules/ts-node/transpilers/swc.js",
             "swc": true
           }
   }
