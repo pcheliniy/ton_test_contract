@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "@orbs-network/ton-access": "^2.3.3",
+    "@ton/core": "^0.56.3",
+    "@ton/crypto": "^3.2.0",
+    "@ton/ton": "^13.11.1",
+    "@types/node": "^20.12.8",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "name": "scripts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node get_nft_data.ts"
+  }
+}

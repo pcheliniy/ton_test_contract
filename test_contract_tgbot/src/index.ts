@@ -10,7 +10,7 @@ require('dotenv').config()
 
 async function networkEndpoint() {
   const endpoint = await getHttpEndpoint({
-    network: process.env.NETWORK as Network
+    network: process.env.NETWORK! as Network
   });
   const client = new TonClient({
     endpoint: endpoint
@@ -39,13 +39,9 @@ bot.on(message("web_app_data"), (ctx) => ctx.reply("ok"));
 
 bot.hears("Get Contract Data", async (ctx) => {
 
-  if (process.env.CONTRACT_ADDRESS) {
-    const contractAddress = Address.parse(process.env.CONTRACT_ADDRESS);
+    const contractAddress = Address.parse(process.env.CONTRACT_ADDRESS!);
     const contract_data  = await (await client).getBalance(contractAddress);
     ctx.reply(fromNano(contract_data.toString()))
-  } else {
-    console.error('CONTRACT_ADDRESS environment variable is not defined.');
-  }
 
 });
 
